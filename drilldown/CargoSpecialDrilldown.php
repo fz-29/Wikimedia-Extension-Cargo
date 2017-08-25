@@ -1294,7 +1294,7 @@ END;
 		}
 
 		$aliasedFieldNames = array(
-			'title' => CargoUtils::escapedFieldName( $cdb, $this->tableName, '_pageName' ),
+			'title' => "DISTINCT(" . CargoUtils::escapedFieldName( $cdb, $this->tableName, '_pageName' ) . ")",
 			'value' => CargoUtils::escapedFieldName( $cdb, $this->tableName, '_pageName' ),
 			'namespace' => CargoUtils::escapedFieldName( $cdb, $this->tableName, '_pageNamespace' ),
 			'ID' => CargoUtils::escapedFieldName( $cdb, $this->tableName, '_pageID' )
